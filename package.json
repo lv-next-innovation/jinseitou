@@ -2,6 +2,12 @@
   "name": "jinseitou",
   "private": true,
   "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "typescript": "^3.4.5"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4"
   }
 }
