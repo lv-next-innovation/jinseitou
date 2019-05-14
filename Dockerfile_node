@@ -6,5 +6,6 @@ WORKDIR $APP_ROOT
 RUN apk add --no-cache \
       build-base
 
-# ADD package.json yarn.lock ./
+ADD package.json yarn.lock ./
+ADD tsconfig.json tslint.json ./
 RUN yarn
