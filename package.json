@@ -1,6 +1,10 @@
 {
   "name": "jinseitou",
   "private": true,
+  "scripts": {
+    "tslint": "tslint --fix 'src/**/*.ts'",
+    "prettier": "prettier --write src/**/*.ts"
+  },
   "dependencies": {
     "prettier": "^1.17.1",
     "react": "^16.8.6",
