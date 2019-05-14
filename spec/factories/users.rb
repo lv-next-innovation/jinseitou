@@ -1,7 +1,9 @@
-FactoryBot.define do 
-  factory :user do 
-      name { "Kota" }
-      sequence(:email) { |n| "kota#{n}@example.com" }
-      password { "password" }
-  end 
-end 
+# frozen_string_literal: true
+
+FactoryBot.define do
+  factory :user do
+    name { 'Kota' }
+    sequence(:email) { |n| "kota#{n}@example.com" }
+    password { 'password' }
+  end
+end

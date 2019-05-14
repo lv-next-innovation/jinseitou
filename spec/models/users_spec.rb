@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  before do 
+  before do
     @user = build(:user)
   end
 
@@ -10,7 +12,5 @@ RSpec.describe User, type: :model do
       @user.email = ''
       expect(@user.valid?).to eq(false)
     end
-
   end
-
 end
