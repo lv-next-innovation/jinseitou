@@ -1,5 +1,7 @@
 {
   "name": "jinseitou",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "typescript": "^3.4.5"
+  }
 }
