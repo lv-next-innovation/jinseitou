@@ -1,7 +1,5 @@
 import * as React from 'react';
-// import * as Redux from 'redux';
 import Logo from './logo';
-
 
 const Header = (props: any) => (
     <div className="header">
@@ -9,4 +7,4 @@ const Header = (props: any) => (
     </div>
   );
 
-  export default Header;
+export default Header;
