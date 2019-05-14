@@ -2,11 +2,13 @@
   "name": "jinseitou",
   "private": true,
   "dependencies": {
+    "prettier": "^1.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
     "redux": "^4.0.1",
     "redux-logger": "^3.0.6",
+    "tslint": "^5.16.0",
     "typescript": "^3.4.5"
   },
   "devDependencies": {
