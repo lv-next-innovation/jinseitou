@@ -1,7 +1,7 @@
-import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import * as TopModule from "../modules/top";
+import { bindActionCreators } from "redux";
 import TopComponent from "../components/top";
+import * as TopModule from "../modules/top";
 
 const mapStateToProps = (state: any) => {
   return {
