@@ -1,8 +1,7 @@
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-
-import * as TopModule from '../modules/top';
-import TopComponent from '../components/top';
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import * as TopModule from "../modules/top";
+import TopComponent from "../components/top";
 
 const mapStateToProps = (state: any) => {
   return {
@@ -16,4 +15,7 @@ const mapDispatchToProps = (dispatch: any) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(TopComponent);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TopComponent);
