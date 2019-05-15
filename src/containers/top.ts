@@ -1,6 +1,5 @@
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-
 import * as TopModule from "../modules/top";
 import TopComponent from "../components/top";
 
