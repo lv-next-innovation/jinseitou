@@ -4,7 +4,6 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'バリデーション' do
-
     context 'emailが空' do
       let(:user) { build :user, email: '' }
 
