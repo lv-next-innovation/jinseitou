@@ -5,7 +5,8 @@ import {
   faVideo,
   faTh,
   faComment,
-  faBell
+  faBell,
+  faUser
 } from '@fortawesome/free-solid-svg-icons';
 
 library.add(
@@ -14,7 +15,8 @@ library.add(
   faVideo,
   faTh,
   faComment,
-  faBell
+  faBell,
+  faUser
 );
 
 export default library;
