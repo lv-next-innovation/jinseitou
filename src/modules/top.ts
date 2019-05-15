@@ -1,5 +1,5 @@
 const initialState = {
-  foo: ''
+  foo: ""
 };
 
 interface IAction {
@@ -8,18 +8,18 @@ interface IAction {
 }
 
 const reducer = (state = initialState, action: IAction) => {
-  switch(action.type) {
-    case 'TEST':
-    return Object.assign({}, state, {
-      foo: action.value
-    });
+  switch (action.type) {
+    case "TEST":
+      return Object.assign({}, state, {
+        foo: action.value
+      });
     default:
-    return state;
-  };
+      return state;
+  }
 };
 
 export const test = (foo: IAction) => {
-  return { type: 'TEST', value: 'bar' };
+  return { type: "TEST", value: "bar" };
 };
 
 export default reducer;

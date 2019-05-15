@@ -1,10 +1,11 @@
 import * as React from 'react';
 import Header from './header/header';
+import Main from './main/main';
 
 const Top = (props: any) => (
   <div>
     <Header />
-    Hello World.
+    <Main />
   </div>
 );
 
