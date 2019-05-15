@@ -2,7 +2,7 @@ import * as React from 'react';
 
 const Top = (props: any) => (
   <div>
-    Hello World.
+    <Header />
   </div>
 );
 
