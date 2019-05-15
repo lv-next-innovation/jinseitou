@@ -14,16 +14,6 @@ gem 'rails', '~> 5.2.3'
 gem 'turbolinks', '~> 5'
 gem 'tzinfo-data'
 
-group :test do
-  gem 'capybara', '>= 2.15'
-  gem 'chromedriver-helper'
-  gem 'factory_bot_rails'
-  gem 'rspec-power_assert'
-  gem 'rspec-rails'
-  gem 'rspec_junit_formatter'
-  gem 'selenium-webdriver'
-end
-
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
@@ -44,6 +34,5 @@ group :test do
   gem 'rspec-power_assert'
   gem 'rspec-rails'
   gem 'rspec_junit_formatter'
-  gem 'selenium-webdriver'
   gem 'selenium-webdriver'
 end
