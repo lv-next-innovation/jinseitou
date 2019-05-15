@@ -5,7 +5,7 @@ import {
 import TopReducer from './modules/top';
 
 declare global {
-  interface Window {
+  interface IWindow {
     store: any;
   }
 }
