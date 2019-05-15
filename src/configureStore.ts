@@ -1,11 +1,8 @@
-import {
-  createStore as reduxCreateStore,
-  combineReducers
-} from 'redux';
-import TopReducer from './modules/top';
+import { combineReducers, createStore as reduxCreateStore } from "redux";
+import TopReducer from "./modules/top";
 
 declare global {
-  interface Window {
+  interface IWindow {
     store: any;
   }
 }
