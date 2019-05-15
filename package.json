@@ -6,7 +6,7 @@
     "start:css": "parcel watch src/style/style.scss -d public --hmr-port 8000 --hmr-hostname 0.0.0.0 --log-level 4",
     "build": "parcel build src/app.tsx -d public && parcel build src/style/style.scss -d public",
     "tslint": "tslint --fix 'src/**/*.ts'",
-    "prettier": "prettier --write src/**/*.ts"
+    "prettier": "prettier --write src/**/*.{ts,tsx}"
   },
   "dependencies": {
     "prettier": "^1.17.1",
@@ -25,6 +25,8 @@
     "@types/redux": "^3.6.0",
     "parcel-bundler": "^1.12.3",
     "sass": "^1.20.1",
-    "ts-loader": "^6.0.0"
+    "ts-loader": "^6.0.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1"
   }
 }
