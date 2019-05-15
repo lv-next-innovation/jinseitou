@@ -6,6 +6,8 @@ const Header = (props: any) => (
   <div className="header">
     <Logo />
     <ButtonComponent icon='th' />
+    <br/>
+    <ButtonComponent icon='user' />
   </div>
 );
 

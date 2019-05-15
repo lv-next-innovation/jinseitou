@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "prettier": "^1.17.1",
-    "react": "^16.8.6",
+    "react": "16.x",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
     "redux": "^4.0.1",
