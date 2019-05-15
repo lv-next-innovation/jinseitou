@@ -6,7 +6,6 @@
     "start:css": "parcel watch src/style/style.scss -d public --hmr-port 8000 --hmr-hostname 0.0.0.0 --log-level 4",
     "build": "parcel build src/app.tsx -d public && parcel build src/style/style.scss -d public",
     "tslint": "tslint --fix 'src/**/*.ts'",
-    "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "prettier": "prettier --write src/**/*.{ts,tsx}"
   },
   "dependencies": {
