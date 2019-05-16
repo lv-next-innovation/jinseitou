@@ -22,14 +22,26 @@ module Api
         if blog.save
           render json: { status: 'SUCCESS', message: 'message created', data: blog }
         else
-          render json: { status: 'FAILED', message: 'could not create message', data: blog.erros }
+          render json: { status: 'FAILED', message: 'could not create message', data: blog.errors }
         end
+      end
+
+      def destroy
+        blog = Blog.find(params[:id])
+        blog.destroy
+        render json: { status: 'SUCCESS', message: 'message has been deleted successfully' }
+      end
+
+      def update
+        blog = Blog.find(params[:id])
+        blog.update( message: params[:message] )
+        render json: { status: 'SUCCESS', message: 'message has been created successfully', data: blog }
       end
 
       private
 
       def blog_params
-        params.permit(:message)
+        params.permit(:message, :user_id)
       end
     end
   end
