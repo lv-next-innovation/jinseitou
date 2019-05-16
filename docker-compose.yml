@@ -27,7 +27,6 @@ services:
       - ./public:/jinseitou/public
       - ./package.json:/jinseitou/package.json
       - ./yarn.lock:/jinseitou/yarn.lock
-      - node_modules:./node_modules
     tty: true
     stdin_open: true
 
