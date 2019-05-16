@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_15_001840) do
+ActiveRecord::Schema.define(version: 2019_05_15_095431) do
 
   create_table "answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "question", default: "", null: false
@@ -20,7 +20,15 @@ ActiveRecord::Schema.define(version: 2019_05_15_001840) do
   end
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "message", default: "", null: false
+    t.string "content", default: "", null: false
+    t.integer "user_id"
+    t.datetime "published_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "histories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "content", default: "", null: false
     t.integer "user_id"
     t.datetime "published_at"
     t.datetime "created_at", null: false
@@ -28,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_05_15_001840) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", default: "", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
