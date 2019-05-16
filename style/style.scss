@@ -6,8 +6,9 @@
 @import "./foundation/_mixin.scss";
 @import "./foundation/_setting.scss";
 
-@import "./object/component/header";
-@import "./object/component/main";
+@import "./object/component/header/_header";
+@import "./object/component/header/_logo";
+@import "./object/component/_main";
 
 // blog
 @import "./object/component/blogs/_detail.scss";
