@@ -12,7 +12,7 @@ interface Props {
 const Button = (props: Props) => {
   const icon = props.icon;
 
-  return <FontAwesomeIcon icon={icon} className="icon" />;
+  return <FontAwesomeIcon icon={icon} className="icon"{class} />;
 };
 
 export default Button;

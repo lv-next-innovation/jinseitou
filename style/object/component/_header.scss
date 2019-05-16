@@ -1,3 +1,41 @@
+$test_border: 0px solid #000;
+
 .header {
-  border: 1px solid #000;
+  border: $test_border;
+  background: #afafaf;
+  box-shadow: 0 0 2px #666, 0 0 8px #222;
+  height: 56px;
+
+  .left{
+    border: $test_border;
+    display: inline-block;
+    width:30%;
+    margin: 12px 0 12px 0;
+    padding: 5px 5px 5px 20px;
+  }
+  .center{
+    border: $test_border;
+    display: inline-block;
+    // border削除後に40%へ
+    width:39%;
+  }
+  .right{
+    border: $test_border;
+    width:150px;
+    height: 54px;
+    position: absolute;
+    right: 0;
+    top:0;
+    bottom: 0;
+    .menu{
+      float: left;
+      margin: 15px 15px 15px 20px;
+      font-size: 24px;
+    }
+    .user{
+      float: left;
+      margin: 15px 15px 15px 0;
+      font-size: 24px;
+    }
+  }
 }
