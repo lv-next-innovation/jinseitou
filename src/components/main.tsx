@@ -1,9 +1,9 @@
 import * as React from "react";
-import Detail from './blog/detail';
+import BlogsDetail from "./blog/detail";
 
 const Main = (props: any) => (
   <div className="main">
-    <Detail />
+    <BlogsDetail />
   </div>
 );
 

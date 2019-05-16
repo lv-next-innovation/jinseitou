@@ -1,10 +1,5 @@
-import * as React from 'react';
+import * as React from "react";
 
+const BlogsDetail = (props: any) => <div className="detail">sample text</div>;
 
-const Detail = (props: any) =>(
-  <div className="detail">
-    sample text
-  </div>
-);
-
-export default Detail;
+export default BlogsDetail;

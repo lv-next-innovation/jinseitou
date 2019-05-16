@@ -1,6 +1,6 @@
-import * as React from 'react';
-import Header from './header/header';
-import Main from './main';
+import * as React from "react";
+import Header from "./header/header";
+import Main from "./main";
 
 const Top = (props: any) => (
   <div>
