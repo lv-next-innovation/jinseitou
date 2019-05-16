@@ -15,12 +15,12 @@ module Api
       end
 
       def create
-        @blog = Blog.new(blog_params)
+        blog = Blog.new(blog_params)
 
-        if @blog.save
-          render json: { status: 'SUCCESS', message: 'message created', data: @blog }
+        if blog.save
+          render json: { status: 'SUCCESS', message: 'message created', data: blog }
         else
-          render json: { status: 'FAILED', message: 'could not create message', data: @blog.erros }
+          render json: { status: 'FAILED', message: 'could not create message', data: blog.erros }
         end
       end
 
