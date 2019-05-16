@@ -1,0 +1,30 @@
+.header {
+  background: #afafaf;
+  box-shadow: 0 0 2px #666, 0 0 8px #222;
+  height: 56px;
+  .center {
+    display: inline-block;
+    width:40%;
+  }
+
+  &__menu {
+    &__list {
+      position: absolute;
+      right: 0;
+      top:0;
+      bottom: 0;
+      width:150px;
+      height: 54px;
+      .menu {
+        float: left;
+        margin: 15px 15px 15px 20px;
+        font-size: 24px;
+      }
+      .user {
+        float: left;
+        margin: 15px 15px 15px 0;
+        font-size: 24px;
+      }
+    }
+  }
+}
