@@ -1,5 +1,5 @@
 import * as React from "react";
 
-const BlogsDetail = (props: any) => <div className="detail">sample text</div>;
+const BlogsDetail = (props: any) => <div className="main__detail">blog component</div>;
 
 export default BlogsDetail;
