@@ -13,6 +13,7 @@ development:
 test:
   <<: *default
   database: jinseitou_test
+  host: <%= ENV.fetch('DB_TEST_HOST') { 'jinseitou_db' } %>
 
 production:
   <<: *default

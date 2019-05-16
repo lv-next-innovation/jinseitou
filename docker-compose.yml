@@ -8,6 +8,7 @@ services:
     command: bundle exec rails server -b 0.0.0.0
     volumes:
       - .:/jinseitou
+      - bundle:/bundle
     depends_on:
       - db
     tty: true
@@ -26,6 +27,7 @@ services:
       - ./public:/jinseitou/public
       - ./package.json:/jinseitou/package.json
       - ./yarn.lock:/jinseitou/yarn.lock
+      - node_modules:./node_modules
     tty: true
     stdin_open: true
 
@@ -41,3 +43,5 @@ services:
 
 volumes:
   mysql-data:
+  bundle:
+  node_modules:
