@@ -4,10 +4,20 @@ import ButtonComponent from "../utils/button";
 
 const Header = (props: any) => (
   <div className="header">
-    <Logo />
-    <ButtonComponent icon="th" />
-    <br />
-    <ButtonComponent icon="user" />
+    <div className="left">
+      <Logo />
+    </div>
+
+    <div className="center" />
+
+    <div className="right">
+      <div className="menu">
+        <ButtonComponent icon="th" />
+      </div>
+      <div className="user">
+        <ButtonComponent icon="user" />
+      </div>
+    </div>
   </div>
 );
 

@@ -1,3 +1,34 @@
 .header {
-  border: 1px solid #000;
+  background: #afafaf;
+  box-shadow: 0 0 2px #666, 0 0 8px #222;
+  height: 56px;
+
+  .left {
+    display: inline-block;
+    width:30%;
+    margin: 12px 0 12px 0;
+    padding: 5px 5px 5px 20px;
+  }
+  .center {
+    display: inline-block;
+    width:40%;
+  }
+  .right {
+    position: absolute;
+    right: 0;
+    top:0;
+    bottom: 0;
+    width:150px;
+    height: 54px;
+    .menu {
+      float: left;
+      margin: 15px 15px 15px 20px;
+      font-size: 24px;
+    }
+    .user {
+      float: left;
+      margin: 15px 15px 15px 0;
+      font-size: 24px;
+    }
+  }
 }
