@@ -3,7 +3,6 @@ class CreateBlogs < ActiveRecord::Migration[5.2]
     create_table :blogs do |t|
       t.string :message, null: false, default: ''
       t.integer :user_id
-      t.datetime :published_at
       t.timestamps
     end
   end
