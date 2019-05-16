@@ -1,18 +1,29 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe Blog, type: :model do
-  #pending "add some examples to (or delete) #{__FILE__}"
-  context 'ブログを作成する時' do
-    example 'ユーザーIDとブログ本文があれば作成できる' do
-      is_asserted_by { !build(:blog) }
-    end
+  context 'ユーザーIDとブログ本文があれば作成できる' do
+    let(:blog) { build :blog }
 
-    example 'ユーザーIDがないと作成できない' do
-      is_asserted_by { !build(:blog, user_id: '') }
+    example '永続化できる' do
+      is_asserted_by { blog.valid? }
     end
+  end
 
-    example 'ブログ本文がないと作成できない' do
-      is_asserted_by { !build(:blog, content: '') }
+  context 'ユーザーIDがないと作成できない' do
+    let(:blog) { build :blog, user_id: nil }
+
+    example '永続化できない' do
+      is_asserted_by { !blog.valid? }
+    end
+  end
+
+  context 'ブログ本文がないと作成できない' do
+    let(:blog) { build :blog, content: '' }
+
+    example '永続化できない' do
+      is_asserted_by { !blog.valid? }
     end
   end
 end
