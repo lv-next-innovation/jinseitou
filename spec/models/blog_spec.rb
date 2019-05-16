@@ -14,5 +14,9 @@ RSpec.describe Blog, type: :model do
     example 'ブログ本文がないと作成できない' do
       is_asserted_by { !build(:blog, message: '') }
     end
+
+    example '永続化できない' do
+      is_asserted_by { !blog.valid? }
+    end
   end
 end
