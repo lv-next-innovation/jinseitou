@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "prettier": "^1.17.1",
-    "react": "^16.8.6",
+    "react": "16.x",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
     "redux": "^4.0.1",
@@ -19,6 +19,9 @@
     "typescript": "^3.4.5"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "@types/react": "^16.8.17",
     "@types/react-dom": "^16.8.4",
     "@types/react-redux": "^7.0.9",
