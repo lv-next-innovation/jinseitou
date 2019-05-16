@@ -12,7 +12,7 @@ RSpec.describe Blog, type: :model do
     end
 
     example 'ブログ本文がないと作成できない' do
-      is_asserted_by { !build(:blog, content: '') }
+      is_asserted_by { !build(:blog, message: '') }
     end
   end
 end
