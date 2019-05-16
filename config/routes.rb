@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   namespace 'api' do
     namespace 'v1' do
       resources :blogs
-      get '/users/:id', to: 'users#show'
+      resources :users, expect: [:index]
       get '/question/detail', to: 'questions#show'
       post '/answers', to: 'answers#create'
     end
