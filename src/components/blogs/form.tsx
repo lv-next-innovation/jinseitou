@@ -2,7 +2,7 @@ import * as React from "react";
 
 const Form = (props: any) => (
   <div className="blog__form">
-    <h3>フォーム</h3>
+    <p className="blog__form__title">フォーム</p>
     <form>
       <label htmlFor="blog__form__content">内容</label>
       <br />
@@ -10,8 +10,13 @@ const Form = (props: any) => (
         type="text"
         name="blog__form__content"
         placeholder="入力してください"
+        className="blog__form__field"
       />
-      <input type="submit" value="送信" />
+      <input
+        type="submit"
+        className="blog__form__botton"
+        value="送信" 
+      />
     </form>
   </div>
 );

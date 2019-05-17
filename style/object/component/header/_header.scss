@@ -1,0 +1,26 @@
+.header {
+  background: #afafaf;
+  box-shadow: 0 0 2px #666, 0 0 8px #222;
+  height: 56px;
+
+  &__menu {
+    &__list {
+      width: 20vw;
+      height: 54px;
+      display: inline-block;
+      box-sizing:border-box;
+
+      .menu {
+        float: left;
+        margin: 15px 15px 15px 20px;
+        font-size: 24px;
+      }
+
+      .user {
+        float: left;
+        margin: 15px 15px 15px 0;
+        font-size: 24px;
+      }
+    }
+  }
+}
