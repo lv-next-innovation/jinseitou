@@ -5,12 +5,10 @@
 
   &__menu {
     &__list {
-      position: absolute;
-      right: 0;
-      top:0;
-      bottom: 0;
-      width:150px;
+      width: 20vw;
       height: 54px;
+      display: inline-block;
+      box-sizing:border-box;
 
       .menu {
         float: left;
