@@ -6,6 +6,7 @@ const Main = (props: any) => (
   <div className="main">
     <BlogForm />
     <div className="main__blogs">
+      <p className="main__blogs__title">ブログ一覧</p>
       <BlogsDetail />
       <BlogsDetail />
       <BlogsDetail />
