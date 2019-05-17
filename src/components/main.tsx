@@ -8,7 +8,7 @@ const Main = (props: any) => (
     <BlogsDetail />
     <BlogsDetail />
     <BlogsDetail />
-    <BlogsDetail />
+    <BlogsDetail )/>
     <BlogsDetail />
   </div>
 );

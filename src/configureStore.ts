@@ -1,5 +1,5 @@
 import { combineReducers, createStore as reduxCreateStore } from "redux";
-import TopReducer from "./modules/top";
+import MainReducer      from "./modules/main";
 
 declare global {
   interface IWindow {
@@ -14,7 +14,8 @@ const createStore = () => {
 
   const store = reduxCreateStore(
     combineReducers({
-      top: TopReducer
+      top:       TopReducer,
+      main:      MainReducer,
     })
   );
   window.store = store;
