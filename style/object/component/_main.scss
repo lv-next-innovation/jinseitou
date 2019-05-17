@@ -1,4 +1,8 @@
 .main {
   margin: 5vw 10vw;
   height: 90vh;
+  &__blogs{
+    border: 1px solid black;
+    margin-top: 50px;
+  }
 }
