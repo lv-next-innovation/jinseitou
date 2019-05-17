@@ -5,11 +5,13 @@ import BlogForm from "./blogs/form";
 const Main = (props: any) => (
   <div className="main">
     <BlogForm />
-    <BlogsDetail />
-    <BlogsDetail />
-    <BlogsDetail />
-    <BlogsDetail />
-    <BlogsDetail />
+    <div className="main__blogs">
+      <BlogsDetail />
+      <BlogsDetail />
+      <BlogsDetail />
+      <BlogsDetail />
+      <BlogsDetail />
+    </div>
   </div>
 );
 
