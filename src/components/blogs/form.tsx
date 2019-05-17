@@ -14,7 +14,7 @@ const Form = (props: any) => (
       />
       <input
         type="submit"
-        className="blog__form__botton"
+        className="blog__form__button"
         value="送信" 
       />
     </form>
