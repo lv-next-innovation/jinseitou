@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Blog < ApplicationRecord
+class Event < ApplicationRecord
   validates :message, presence: true
   validates :user_id, presence: true
 end
