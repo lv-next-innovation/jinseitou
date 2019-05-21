@@ -5,7 +5,7 @@ import * as BlogsForm from "../../modules/blogs/form";
 
 const mapStateToProps = (state: any) => {
   return {
-    form: state.blogs.form
+    form: state.blogsForm
   };
 };
 
