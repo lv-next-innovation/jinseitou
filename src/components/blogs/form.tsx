@@ -21,12 +21,8 @@ const Form = (props: any) => (
         placeholder="入力してください"
         className="blog__form__field"
       />
-      <input
-        type="submit"
-        className="blog__form__button"
-        value="送信" 
-      />
-      <button onClick={() => }>Submit</button>
+  
+      <button onClick={() => } className="blog__form__button">Submit</button>
   </div>
 );
 
