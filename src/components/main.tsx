@@ -1,10 +1,13 @@
-import * as React from "react";
+import * as React  from "react";
+
 import BlogsDetail from "./blogs/detail";
-import BlogForm from "./blogs/form";
+import BlogsForm   from "../containers/blogs/form";
 
 const Main = (props: any) => (
   <div className="main">
-    <BlogForm />
+
+    <BlogsForm />
+
     <div className="main__blogs">
       <p className="main__blogs__title">ブログ一覧</p>
       <BlogsDetail />

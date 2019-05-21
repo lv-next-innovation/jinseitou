@@ -9,6 +9,7 @@
     "prettier": "prettier --write src/**/*.{ts,tsx}"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "prettier": "^1.17.1",
     "react": "16.x",
     "react-dom": "^16.8.6",
