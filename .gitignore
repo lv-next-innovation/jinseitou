@@ -34,3 +34,5 @@
 /public/style.js.map
 
 .DS_Store
+
+.cache
