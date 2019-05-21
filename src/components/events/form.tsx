@@ -2,7 +2,7 @@ import * as React from "react";
 import axios from 'axios';
 
 const sendEvent = () => {
-  axios.post('/api/v1/events', {
+  axios.get('/api/v1/events', {
     message: 'foo',
     user_id: 1
   }).then((res) => {
@@ -22,7 +22,7 @@ const Form = (props: any) => (
         className="event__form__field"
       />
   
-      <button onClick={() => } className="event__form__button">Submit</button>
+      <button onClick={() => sendEvent()} className="event__form__button">Submit</button>
   </div>
 );
 
