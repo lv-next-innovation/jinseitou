@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import BlogsFormComponent from "../../components/blogs/form";
+import BlogsFormComponent from "../../components/events/form";
 import * as BlogsForm from "../../modules/blogs/form";
 
 const mapStateToProps = (state: any) => {
