@@ -1,7 +1,7 @@
 import * as React  from "react";
 
-import BlogsDetail from "./blogs/detail";
-import BlogsForm   from "../containers/blogs/form";
+import BlogsDetail from "./events/detail";
+import BlogsForm   from "../containers/events/form";
 
 const Main = (props: any) => (
   <div className="main">
