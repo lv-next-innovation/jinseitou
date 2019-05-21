@@ -1,20 +1,20 @@
 import * as React  from "react";
 
-import BlogsDetail from "./events/detail";
-import BlogsForm   from "../containers/events/form";
+import EventsDetail from "./events/detail";
+import EventsForm   from "../containers/events/form";
 
 const Main = (props: any) => (
   <div className="main">
 
-    <BlogsForm />
+    <EventsForm />
 
-    <div className="main__blogs">
-      <p className="main__blogs__title">ブログ一覧</p>
-      <BlogsDetail />
-      <BlogsDetail />
-      <BlogsDetail />
-      <BlogsDetail />
-      <BlogsDetail />
+    <div className="main__events">
+      <p className="main__events__title">ブログ一覧</p>
+      <EventsDetail />
+      <EventsDetail />
+      <EventsDetail />
+      <EventsDetail />
+      <EventsDetail />
     </div>
   </div>
 );

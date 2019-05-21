@@ -1,7 +1,7 @@
 import * as React from "react";
 
-const BlogsDetail = (props: any) => (
-  <div className="main__detail">blog component</div>
+const EventsDetail = (props: any) => (
+  <div className="main__detail">Evnet Component</div>
 );
 
-export default BlogsDetail;
+export default EventsDetail;

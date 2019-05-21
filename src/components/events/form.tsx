@@ -1,8 +1,8 @@
 import * as React from "react";
 import axios from 'axios';
 
-const sendBlog = () => {
-  axios.post('/api/v1/blogs', {
+const sendEvent = () => {
+  axios.post('/api/v1/events', {
     message: 'foo',
     user_id: 1
   }).then((res) => {
@@ -11,18 +11,18 @@ const sendBlog = () => {
 };
 
 const Form = (props: any) => (
-  <div className="blog__form">
+  <div className="event__form">
     <h3>フォーム</h3>
-      <label htmlFor="blog__form__content">内容</label>
+      <label htmlFor="event__form__content">内容</label>
 
       <input
         type="text"
-        name="blog__form__content"
+        name="event__form__content"
         placeholder="入力してください"
-        className="blog__form__field"
+        className="event__form__field"
       />
   
-      <button onClick={() => } className="blog__form__button">Submit</button>
+      <button onClick={() => } className="event__form__button">Submit</button>
   </div>
 );
 

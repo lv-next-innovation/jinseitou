@@ -1,21 +1,21 @@
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import BlogsFormComponent from "../../components/events/form";
-import * as BlogsForm from "../../modules/blogs/form";
+import EventsFormComponent from "../../components/events/form";
+import * as EventsForm from "../../modules/events/form";
 
 const mapStateToProps = (state: any) => {
   return {
-    form: state.blogsForm
+    form: state.EventsForm
   };
 };
 
 const mapDispatchToProps = (dispatch: any) => {
   return {
-    ...bindActionCreators(BlogsFormComponent, dispatch)
+    ...bindActionCreators(EventsFormComponent, dispatch)
   };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(BlogsFormComponent);
+)(EventsFormComponent);
