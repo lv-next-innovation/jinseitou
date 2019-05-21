@@ -13,13 +13,6 @@ interface IAction {
 const reducer = (state = initialState, action: IAction) => {
   switch (action.type) {
     case "SEND_BLOG":
-      // axios.post('/api/v1/blogs', {
-      //   message: 'foo',
-      //   user_id: 1
-      // }).then((res) => {
-      //   console.log(res.data);
-      // });
-
       return Object.assign({}, state, {
         message: action.value.message,
         userId:  action.value.userId
