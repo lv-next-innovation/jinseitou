@@ -1,5 +1,11 @@
-.logo {
+.header__logo {
   display: inline-block;
+  vertical-align: top;
   width: 80vw;
-  box-sizing:border-box;
+  height: 54px;
+  box-sizing: border-box;
+
+  &__img {
+    width: 85px;
+  }
 }
