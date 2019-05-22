@@ -11,16 +11,17 @@ module Api
       end
 
       def create
-        ito = Ito.create(ito_params)
+        binding.pry
+        @ito = Ito.create(ito_params)
 
-        render json: { status: 'SUCCESS', itos: ito }
+        render json: { status: 'SUCCESS', itos: @ito }
       end
 
       private
 
-      def ito_params
-        params.permit(:target, :thread)
-      end
+        def ito_params
+          params.require(:itos).permit(:target, :thread)
+        end
     end
   end
 end
