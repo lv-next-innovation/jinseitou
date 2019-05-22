@@ -3,7 +3,6 @@
 module Api
   module V1
     class EventsController < ApplicationController
-
       protect_from_forgery
 
       def index
@@ -13,7 +12,7 @@ module Api
 
       def show
         event = Event.find(params[:id])
-        render json: { status: 'SUCCESS', message: 'loaded single event', data: event}
+        render json: { status: 'SUCCESS', message: 'loaded single event', data: event }
       end
 
       def create
@@ -34,7 +33,7 @@ module Api
 
       def update
         event = Event.find(params[:id])
-        event.update( title: params[:title], date: params[:date] )
+        event.update(title: params[:title], date: params[:date])
         render json: { status: 'SUCCESS', message: 'message has been created successfully', data: event }
       end
 
