@@ -1,7 +1,7 @@
 import { combineReducers, createStore as reduxCreateStore } from "redux";
-import TopReducer       from "./modules/top";
-import MainReducer      from "./modules/main";
-import EventsFormReducer from "./modules/events/form.ts";
+import EventsFormReducer from "./modules/events/form";
+import MainReducer from "./modules/main";
+import TopReducer from "./modules/top";
 
 declare global {
   interface IWindow {
@@ -16,9 +16,9 @@ const createStore = () => {
 
   const store = reduxCreateStore(
     combineReducers({
-      top:       TopReducer,
-      main:      MainReducer,
-      eventsForm: EventsFormReducer
+      eventsForm: EventsFormReducer,
+      main: MainReducer,
+      top: TopReducer
     })
   );
   window.store = store;

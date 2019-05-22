@@ -1,28 +1,47 @@
+import axios from "axios";
 import * as React from "react";
-import axios from 'axios';
 
 const sendEvent = () => {
-  axios.post('/api/v1/events', {
-    message: 'foo',
-    user_id: 1
-  }).then((res) => {
-    console.log(res.data);
-  })
+  axios
+    .get("/api/v1/events", {
+      message: "foo",
+      user_id: 1
+    })
+    .then(res => {
+      console.log(res.data);
+    });
 };
 
 const Form = (props: any) => (
   <div className="event__form">
-    <h3>フォーム</h3>
-      <label htmlFor="event__form__content">内容</label>
+    <h3>出来事</h3>
 
+    <div>
+      {console.log(props)}
+      <label htmlFor="event__form__content">いつ？</label>
       <input
         type="text"
-        name="event__form__content"
-        placeholder="入力してください"
+        name="events[when]"
+        placeholder="高校生の時"
+        className="event__form__field"
+        onChange={e => props.changeText(e.target.value)}
+      />
+      <label htmlFor="event__form__content">いつ？</label>
+    </div>
+
+    <div>
+      <label htmlFor="event__form__content">何があった？</label>
+      <input
+        type="text"
+        name="events[title]"
+        placeholder="初恋があった"
         className="event__form__field"
       />
-  
-      <button onClick={() => } className="event__form__button">Submit</button>
+    </div>
+
+    <button onClick={() => sendEvent()} className="event__form__button">
+      Submit
+    </button>
   </div>
 );
 
