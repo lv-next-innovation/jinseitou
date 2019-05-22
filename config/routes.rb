@@ -7,7 +7,8 @@ Rails.application.routes.draw do
     namespace 'v1' do
       resources :events
       get '/question/detail', to: 'questions#show'
-      post '/answers', to: 'answers#create'
+      get '/itos', to: 'itos#index'
+      post '/itos', to: 'itos#create'
     end
   end
 end
