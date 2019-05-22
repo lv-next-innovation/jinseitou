@@ -11,10 +11,9 @@ module Api
       end
 
       def create
-        binding.pry
-        @ito = Ito.create(ito_params)
+        ito = Ito.create(ito_params)
 
-        render json: { status: 'SUCCESS', itos: @ito }
+        render json: { status: 'SUCCESS', itos: ito }
       end
 
       private
