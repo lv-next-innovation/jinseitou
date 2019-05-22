@@ -29,7 +29,6 @@ const reducer = (state = initialState, action: IAction) => {
 };
 
 export const changeText = (etv: any) => {
-  console.log(etv);
   return { type: "CHANGE_TEXT", value: etv };
 };
 
