@@ -18,9 +18,9 @@ module Api
 
       private
 
-      def ito_params
-        params.permit(:target, :thread)
-      end
+        def ito_params
+          params.require(:itos).permit(:target, :thread)
+        end
     end
   end
 end
