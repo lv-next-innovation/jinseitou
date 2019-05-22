@@ -5,7 +5,7 @@ import * as EventsFormModule from "../../modules/events/form";
 
 const mapStateToProps = (state: any) => {
   return {
-    form: state.EventsForm
+    eventsForm: state.eventsForm
   };
 };
 
