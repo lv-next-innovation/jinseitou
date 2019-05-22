@@ -32,6 +32,7 @@ services:
       - "8080:8080"
     volumes:
       - ./src:/jinseitou/src
+      - ./style:/jinseitou/style
       - ./package.json:/jinseitou/package.json
       - ./yarn.lock:/jinseitou/yarn.lock
       - node_modules:/jinseitou/node_modules
