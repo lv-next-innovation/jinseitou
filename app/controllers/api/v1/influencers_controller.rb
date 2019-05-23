@@ -17,9 +17,9 @@ module Api
 
       private
 
-        def influencer_params
-          params.permit(:name, :ito_id)
-        end
+      def influencer_params
+        params.permit(:name, :ito_id)
+      end
     end
   end
 end
