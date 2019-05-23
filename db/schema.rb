@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2019_05_23_001841) do
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", default: "", null: false
-    t.string "date", default: "", null: false
+    t.datetime "event_date", null: false
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 2019_05_23_001841) do
   end
 
   create_table "itos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "target", default: "", null: false
-    t.string "thread", default: "", null: false
+    t.string "story", default: "", null: false
+    t.bigint "event_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
