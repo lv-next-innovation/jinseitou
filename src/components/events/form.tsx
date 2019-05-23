@@ -1,17 +1,18 @@
 import axios from "axios";
 import * as React from "react";
 
-const sendEvent = (params: any) => {
+const sendEvent = (params: any, formReset) => {
   axios
     .post("/api/v1/events", {
       events: {
-        title: params,
-        event_date: "2019-05-23",
+        event_date: params.event_date,
+        title: params.title,
         user_id: 1
       }
     })
     .then(res => {
       console.log(res.data);
+      formReset();
     });
 };
 
@@ -20,29 +21,31 @@ const Form = (props: any) => (
     <h3>出来事</h3>
 
     <div>
-      {console.log(props)}
       <label htmlFor="event__form__content">いつ？</label>
       <input
         type="text"
-        name="events[when]"
-        placeholder="高校生の時"
+        value={props.eventsForm.event_date}
+        placeholder="1994-07-31"
         className="event__form__field"
-        onChange={e => props.changeText(e.target.value)}
+        onChange={e => props.changeEventDate(e.target.value)}
       />
-      <label htmlFor="event__form__content">いつ？</label>
     </div>
 
     <div>
       <label htmlFor="event__form__content">何があった？</label>
       <input
         type="text"
-        name="events[title]"
+        value={props.eventsForm.title}
         placeholder="初恋があった"
         className="event__form__field"
+        onChange={e => props.changeTitle(e.target.value)}
       />
     </div>
 
-    <button onClick={() => sendEvent(props.eventsForm.inputValue)} className="event__form__button">
+    <button
+      onClick={() => sendEvent(props.eventsForm, props.formReset)}
+      className="event__form__button"
+    >
       Submit
     </button>
   </div>
