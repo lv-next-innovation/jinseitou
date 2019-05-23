@@ -12,11 +12,7 @@ const Form = (props: any) => (
         className="ito__form__content__field"
         onChange={e => props.changeContent(e.target.value)}
       />
-      <button
-        className="ito__form__content__button"
-      >
-        Submit
-      </button>
+      <button className="ito__form__content__button">Submit</button>
     </div>
 
     <div className="ito__form__content">
@@ -29,11 +25,7 @@ const Form = (props: any) => (
         onChange={e => props.changeContent(e.target.value)}
       />
 
-      <button
-          className="ito__form__content__plus__button"
-      >
-        +
-      </button>
+      <button className="ito__form__content__plus__button">+</button>
     </div>
   </div>
 );

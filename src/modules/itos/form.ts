@@ -20,7 +20,7 @@ const reducer = (state = initialState, action: IAction) => {
 };
 
 export const changeContent = (params: IAction) => {
-  return { type: "CHANGE_CONTENT", value: params }
+  return { type: "CHANGE_CONTENT", value: params };
 };
 
 export default reducer;
