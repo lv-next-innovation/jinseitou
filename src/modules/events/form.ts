@@ -32,9 +32,9 @@ const reducer = (state = initialState, action: IAction) => {
 
     case "FORM_RESET":
       return Object.assign({}, state, {
-        event_date: '',
-        title: '',
-        userId: ''
+        event_date: "",
+        title: "",
+        userId: ""
       });
 
     default:
@@ -51,7 +51,7 @@ export const changeTitle = (params: IAction) => {
 };
 
 export const formReset = () => {
-  return { type: "FORM_RESET" }
+  return { type: "FORM_RESET" };
 };
 
 export default reducer;
