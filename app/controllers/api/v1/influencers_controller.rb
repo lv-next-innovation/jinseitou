@@ -10,6 +10,11 @@ module Api
         render json: { status: 'SUCCESS', message: 'loaded influencers', data: influencers }
       end
 
+      def show
+        influencer = Influencer.find(params[:id])
+        render json: { status: 'SUCCESS', message: 'loaded influencers', data: influencer }
+      end
+
       def create
         influencer = Influencer.create(influencer_params)
         render json: { status: 'SUCCESS', data: influencer }
@@ -18,7 +23,7 @@ module Api
       private
 
       def influencer_params
-        params.permit(:name, :ito_id)
+        params.require(:influencers).permit(:name, :ito_id)
       end
     end
   end

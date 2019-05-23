@@ -3,4 +3,6 @@
 class Influencer < ApplicationRecord
   validates :name, presence: true
   validates :ito_id, presence: true
+
+  belongs_to :ito
 end
