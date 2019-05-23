@@ -18,7 +18,7 @@ module Api
       private
 
       def ito_params
-        params.permit(:story, :event_id)
+        params.require(:itos).permit(:story, :event_id)
       end
     end
   end
