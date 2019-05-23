@@ -1,5 +1,4 @@
 import * as React from "react";
-import * as Redux from "redux";
 
 const Logo = (props: any) => (
   <div className="header__logo">
