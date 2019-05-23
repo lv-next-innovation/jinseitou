@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 2019_05_15_001840) do
   end
 
   create_table "itos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "target", default: "", null: false
-    t.string "thread", default: "", null: false
+    t.string "story", default: "", null: false
+    t.bigint "event_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

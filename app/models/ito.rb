@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 class Ito < ApplicationRecord
-  validates :target, presence: true
-  validates :thread, presence: true
+  validates :story, presence: true
+  validates :event_id, presence: true
 end
