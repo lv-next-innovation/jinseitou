@@ -1,5 +1,6 @@
 import { combineReducers, createStore as reduxCreateStore } from "redux";
 import EventsFormReducer from "./modules/events/form";
+import DebugReducer from "./modules/local/debug";
 import MainReducer from "./modules/main";
 import TopReducer from "./modules/top";
 
@@ -18,7 +19,8 @@ const createStore = () => {
     combineReducers({
       eventsForm: EventsFormReducer,
       main: MainReducer,
-      top: TopReducer
+      top: TopReducer,
+      debug: DebugReducer
     })
   );
   window.store = store;
