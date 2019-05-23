@@ -14,13 +14,11 @@ interface IAction {
 const reducer = (state = initialState, action: IAction) => {
   switch (action.type) {
     case "CHANGE_EVENT_DATE":
-      console.log(action.value)
       return Object.assign({}, state, {
         event_date: action.value
       })
 
     case "CHANGE_TITLE":
-      console.log(action.value)
       return Object.assign({}, state, {
         title: action.value
       });
