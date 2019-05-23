@@ -16,7 +16,7 @@ const reducer = (state = initialState, action: IAction) => {
     case "CHANGE_EVENT_DATE":
       return Object.assign({}, state, {
         event_date: action.value
-      })
+      });
 
     case "CHANGE_TITLE":
       return Object.assign({}, state, {
