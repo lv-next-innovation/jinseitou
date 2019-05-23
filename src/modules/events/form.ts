@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const initialState = {
-  inputValue: "",
-  message: "",
+  event_date: "",
+  title: "",
   userId: 0
 };
 
@@ -20,7 +20,8 @@ const reducer = (state = initialState, action: IAction) => {
 
     case "SEND_BLOG":
       return Object.assign({}, state, {
-        message: action.value.message,
+        event_date: action.value.event_date,
+        title: action.value.title,
         userId: action.value.userId
       });
     default:
