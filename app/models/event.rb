@@ -2,6 +2,6 @@
 
 class Event < ApplicationRecord
   validates :title, presence: true
-  validates :date, presence: true
+  validates :event_date, presence: true
   validates :user_id, presence: true
 end

@@ -33,14 +33,14 @@ module Api
 
       def update
         event = Event.find(params[:id])
-        event.update(title: params[:title], date: params[:date])
+        event.update(title: params[:title], event_date: params[:event_date])
         render json: { status: 'SUCCESS', message: 'message has been created successfully', data: event }
       end
 
       private
 
       def event_params
-        params.require(:events).permit(:title, :date, :user_id)
+        params.permit(:title, :event_date, :user_id)
       end
     end
   end
