@@ -9,6 +9,8 @@ Rails.application.routes.draw do
       get '/question/detail', to: 'questions#show'
       get '/itos', to: 'itos#index'
       post '/itos', to: 'itos#create'
+      get '/influencers', to: 'influencers#index'
+      post '/influencers', to: 'influencers#create'
     end
   end
 end
