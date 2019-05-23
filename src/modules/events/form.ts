@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const initialState = {
-  inputValue: "",
-  message: "",
+  event_date: "",
+  title: "",
   userId: 0
 };
 
@@ -13,27 +13,45 @@ interface IAction {
 
 const reducer = (state = initialState, action: IAction) => {
   switch (action.type) {
-    case "CHANGE_TEXT":
+    case "CHANGE_EVENT_DATE":
       return Object.assign({}, state, {
-        inputValue: action.value
+        event_date: action.value
+      });
+
+    case "CHANGE_TITLE":
+      return Object.assign({}, state, {
+        title: action.value
       });
 
     case "SEND_BLOG":
       return Object.assign({}, state, {
-        message: action.value.message,
+        event_date: action.value.event_date,
+        title: action.value.title,
         userId: action.value.userId
       });
+
+    case "FORM_RESET":
+      return Object.assign({}, state, {
+        event_date: '',
+        title: '',
+        userId: ''
+      });
+
     default:
       return state;
   }
 };
 
-export const changeText = (etv: any) => {
-  return { type: "CHANGE_TEXT", value: etv };
+export const changeEventDate = (params: IAction) => {
+  return { type: "CHANGE_EVENT_DATE", value: params };
 };
 
-export const sendBlog = (params: IAction) => {
-  return { type: "SEND_BLOG", value: params };
+export const changeTitle = (params: IAction) => {
+  return { type: "CHANGE_TITLE", value: params };
+};
+
+export const formReset = () => {
+  return { type: "FORM_RESET" }
 };
 
 export default reducer;
