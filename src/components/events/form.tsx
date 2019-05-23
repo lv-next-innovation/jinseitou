@@ -1,7 +1,6 @@
 import axios from "axios";
 import * as React from "react";
 
-  console.log(params)
 const sendEvent = (params: any, formReset) => {
   axios
     .post("/api/v1/events", {
