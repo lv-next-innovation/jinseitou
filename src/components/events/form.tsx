@@ -25,11 +25,10 @@ const Form = (props: any) => (
       <input
         type="text"
         name="events[when]"
-        placeholder="高校生の時"
+        placeholder="◯年◯月"
         className="event__form__field"
         onChange={e => props.changeText(e.target.value)}
       />
-      <label htmlFor="event__form__content">いつ？</label>
     </div>
 
     <div>
