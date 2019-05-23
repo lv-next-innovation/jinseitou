@@ -1,11 +1,14 @@
 import axios from "axios";
 import * as React from "react";
 
-const sendEvent = () => {
+const sendEvent = (params: any) => {
   axios
-    .get("/api/v1/events", {
-      message: "foo",
-      user_id: 1
+    .post("/api/v1/events", {
+      events: {
+        title: params,
+        event_date: "2019-05-23",
+        user_id: 1
+      }
     })
     .then(res => {
       console.log(res.data);
@@ -39,7 +42,7 @@ const Form = (props: any) => (
       />
     </div>
 
-    <button onClick={() => sendEvent()} className="event__form__button">
+    <button onClick={() => sendEvent(props.eventsForm.inputValue)} className="event__form__button">
       Submit
     </button>
   </div>

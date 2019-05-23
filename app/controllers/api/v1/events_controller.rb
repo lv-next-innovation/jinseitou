@@ -40,7 +40,7 @@ module Api
       private
 
       def event_params
-        params.permit(:title, :event_date, :user_id)
+        params.require(:events).permit(:title, :event_date, :user_id)
       end
     end
   end
