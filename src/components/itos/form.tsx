@@ -5,14 +5,14 @@ const Form = (props: any) => (
     <h3>出来事を振り返ってみよう</h3>
 
     <div className="ito__form__content">
+      {console.log(props)}
       <input
         type="text"
-        value={"aaa"}
+        value={props.itosForm.story}
         placeholder="告白した"
         className="ito__form__content__field"
-        onChange={e => props.changeContent(e.target.value)}
+        onChange={e => props.changeStory(e.target.value)}
       />
-      <button className="ito__form__content__button">Submit</button>
     </div>
 
     <div className="ito__form__content">
@@ -26,6 +26,12 @@ const Form = (props: any) => (
       />
 
       <button className="ito__form__content__plus__button">+</button>
+      <button
+        onClick={() => props.sendIto(props.itosForm)}
+        className="ito__form__content__button"
+      >
+        Submit
+      </button>
     </div>
   </div>
 );

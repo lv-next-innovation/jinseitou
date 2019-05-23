@@ -1,5 +1,8 @@
+import axios from "axios";
+
 const initialState = {
-  content: ""
+  story: "",
+  eventId: 0
 };
 
 interface IAction {
@@ -9,18 +12,34 @@ interface IAction {
 
 const reducer = (state = initialState, action: IAction) => {
   switch (action.type) {
-    case "CHANGE_CONTENT":
+    case "CHANGE_STORY":
       return Object.assign({}, state, {
-        content: action.value
+        story: action.value
       });
+
+    case "SEND_ITO":
+      axios
+        .post("/api/v1/itos", {
+          itos: {
+            story: state.story,
+            event_id: 1
+          }
+        }).then(res => {
+          console.log(res.data);
+        });
+      return state;
 
     default:
       return state;
   }
 };
 
-export const changeContent = (params: IAction) => {
-  return { type: "CHANGE_CONTENT", value: params };
+export const changeStory = params => {
+  return { type: "CHANGE_STORY", value: params };
+};
+
+export const sendIto = params => {
+  return { type: "SEND_ITO", value: params };
 };
 
 export default reducer;
