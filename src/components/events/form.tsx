@@ -24,6 +24,7 @@ const Form = (props: any) => (
       <label htmlFor="event__form__content">いつ？</label>
       <input
         type="text"
+        value={props.eventsForm.event_date}
         placeholder="1994-07-31"
         className="event__form__field"
         onChange={e => props.changeEventDate(e.target.value)}
@@ -34,6 +35,7 @@ const Form = (props: any) => (
       <label htmlFor="event__form__content">何があった？</label>
       <input
         type="text"
+        value={props.eventsForm.title}
         placeholder="初恋があった"
         className="event__form__field"
         onChange={e => props.changeTitle(e.target.value)}
