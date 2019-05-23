@@ -17,10 +17,10 @@ const createStore = () => {
 
   const store = reduxCreateStore(
     combineReducers({
+      debug: DebugReducer,
       eventsForm: EventsFormReducer,
       main: MainReducer,
-      top: TopReducer,
-      debug: DebugReducer
+      top: TopReducer
     })
   );
   window.store = store;
