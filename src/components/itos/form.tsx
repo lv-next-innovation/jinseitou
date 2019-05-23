@@ -2,14 +2,31 @@ import * as React from "react";
 
 const Form = (props: any) => (
   <div className="ito__form">
-    <input
-      type="text"
-      value={"aaa"}
-      placeholder="告白した"
-      onChange={e => props.changeContent(e.target.value)}
-    />
+    {/* <h3 className="ito__form_title">ITO機能</h3> */}
+    <div className="ito__form__content">
+      <label htmlFor="">出来事を振り返ってみよう</label>
+      <input
+        type="text"
+        value={"aaa"}
+        placeholder="告白した"
+        className="ito__form__content__field"
+        onChange={e => props.changeContent(e.target.value)}
+      />
+      <button className="ito__form__content__button">Submit</button>
+    </div>
 
-    <button>Submit</button>
+    <div className="ito__form__content">
+      <label>どんな人？</label>
+      <input
+        type="text"
+        value={"aaa"}
+        placeholder="告白した"
+        className="ito__form__content__field ito__form__content__field__mb__20"
+        onChange={e => props.changeContent(e.target.value)}
+      />
+
+      <button className="ito__form__content__plus__button">+</button>
+    </div>
   </div>
 );
 
