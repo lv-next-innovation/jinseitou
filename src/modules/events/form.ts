@@ -13,9 +13,16 @@ interface IAction {
 
 const reducer = (state = initialState, action: IAction) => {
   switch (action.type) {
-    case "CHANGE_TEXT":
+    case "CHANGE_EVENT_DATE":
+      console.log(action.value)
       return Object.assign({}, state, {
-        inputValue: action.value
+        event_date: action.value
+      })
+
+    case "CHANGE_TITLE":
+      console.log(action.value)
+      return Object.assign({}, state, {
+        title: action.value
       });
 
     case "SEND_BLOG":
@@ -29,12 +36,12 @@ const reducer = (state = initialState, action: IAction) => {
   }
 };
 
-export const changeText = (etv: any) => {
-  return { type: "CHANGE_TEXT", value: etv };
+export const changeEventDate = (params: IAction) => {
+  return { type: "CHANGE_EVENT_DATE", value: params };
 };
 
-export const sendBlog = (params: IAction) => {
-  return { type: "SEND_BLOG", value: params };
+export const changeTitle = (params: IAction) => {
+  return { type: "CHANGE_TITLE", value: params };
 };
 
 export default reducer;
