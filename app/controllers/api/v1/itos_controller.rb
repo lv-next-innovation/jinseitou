@@ -17,11 +17,12 @@ module Api
 
       def create
         ito = Ito.new(ito_params)
+        influencer = Influencer.new(influencer_params)
 
-        if ito.save
-          render json: { status: 'SUCCESS', data: ito }
+        if ito.save && influencer.save
+          render json: { status: 'SUCCESS', data: [ito, influencer] }
         else
-          render json: { status: 'FAILED', message: 'could not create message', data: event.errors }
+          render json: { status: 'FAILED', message: 'could not create message', data: [event.errors, influencer.errors] }
         end
       end
 
@@ -29,6 +30,10 @@ module Api
 
       def ito_params
         params.require(:itos).permit(:story, :event_id)
+      end
+
+      def influencer_params
+        params.require(:itos).permit(:name, :ito_id)
       end
     end
   end
