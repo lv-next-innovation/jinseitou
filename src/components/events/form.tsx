@@ -1,8 +1,8 @@
 import axios from "axios";
 import * as React from "react";
 
-const sendEvent = (params: any) => {
   console.log(params)
+const sendEvent = (params: any, formReset) => {
   axios
     .post("/api/v1/events", {
       events: {
@@ -13,6 +13,7 @@ const sendEvent = (params: any) => {
     })
     .then(res => {
       console.log(res.data);
+      formReset();
     });
 };
 
@@ -41,7 +42,7 @@ const Form = (props: any) => (
     </div>
 
     <button
-      onClick={() => sendEvent(props.eventsForm)}
+      onClick={() => sendEvent(props.eventsForm, props.formReset)}
       className="event__form__button"
     >
       Submit
