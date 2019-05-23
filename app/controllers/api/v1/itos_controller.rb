@@ -10,6 +10,11 @@ module Api
         render json: { status: 'SUCCESS', message: 'loaded Itos', data: itos }
       end
 
+      def show
+        ito = Ito.find(params[:id])
+        render json: { status: 'SUCCESS', message: 'loaded Itos', data: ito }
+      end
+
       def create
         ito = Ito.create(ito_params)
         render json: { status: 'SUCCESS', data: ito }
