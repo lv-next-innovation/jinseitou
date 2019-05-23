@@ -12,15 +12,14 @@ module Api
 
       def create
         ito = Ito.create(ito_params)
-
-        render json: { status: 'SUCCESS', itos: ito }
+        render json: { status: 'SUCCESS', data: ito }
       end
 
       private
 
-        def ito_params
-          params.require(:itos).permit(:target, :thread)
-        end
+      def ito_params
+        params.permit(:story, :event_id)
+      end
     end
   end
 end
