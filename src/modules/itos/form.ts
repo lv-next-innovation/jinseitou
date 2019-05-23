@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const initialState = {
+  influencer: "",
   story: "",
   eventId: 0
 };
@@ -17,16 +18,24 @@ const reducer = (state = initialState, action: IAction) => {
         story: action.value
       });
 
+    case "CHANGE_INFLUENCER":
+      return Object.assign({}, state, {
+        influencer: action.value
+      });
+
     case "SEND_ITO":
       axios
         .post("/api/v1/itos", {
           itos: {
-            story: state.story,
+            ito_id: 1,
+            name: action.value.influencer,
+            story: action.value.story,
             event_id: 1
           }
         }).then(res => {
           console.log(res.data);
         });
+
       return state;
 
     default:
@@ -36,6 +45,10 @@ const reducer = (state = initialState, action: IAction) => {
 
 export const changeStory = params => {
   return { type: "CHANGE_STORY", value: params };
+};
+
+export const changeInfluencer = params => {
+  return { type: "CHANGE_INFLUENCER", value: params };
 };
 
 export const sendIto = params => {

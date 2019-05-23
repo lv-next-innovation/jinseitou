@@ -3,7 +3,7 @@ import EventsFormReducer from "./modules/events/form";
 import DebugReducer from "./modules/local/debug";
 import MainReducer from "./modules/main";
 import TopReducer from "./modules/top";
-import ItoFormReducer from "./modules/itos/form";
+import ItosFormReducer from "./modules/itos/form";
 
 declare global {
   interface IWindow {
@@ -22,7 +22,7 @@ const createStore = () => {
       eventsForm: EventsFormReducer,
       main: MainReducer,
       top: TopReducer,
-      itosForm: ItoFormReducer
+      itosForm: ItosFormReducer
     })
   );
   window.store = store;

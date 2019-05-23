@@ -15,14 +15,15 @@ const Form = (props: any) => (
       />
     </div>
 
+    <h3>その出来事において深く関わった人は？</h3>
+
     <div className="ito__form__content">
-      <label>どんな人？</label>
       <input
         type="text"
-        value={"aaa"}
-        placeholder="告白した"
+        value={props.itosForm.influencer}
+        placeholder="日向徹"
         className="ito__form__content__field ito__form__content__field__mb__20"
-        onChange={e => props.changeContent(e.target.value)}
+        onChange={e => props.changeInfluencer(e.target.value)}
       />
 
       <button className="ito__form__content__plus__button">+</button>
