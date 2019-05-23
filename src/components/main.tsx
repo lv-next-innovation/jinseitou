@@ -1,8 +1,7 @@
 import * as React from "react";
 
 import EventsForm from "../containers/events/form";
-import EventsDetail from "./events/detail";
-import ItosForm from "./itos/form";
+import ItosForm from "../containers/itos/form";
 
 const Main = (props: any) => (
   <div className="main">
