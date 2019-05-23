@@ -16,8 +16,13 @@ module Api
       end
 
       def create
-        ito = Ito.create(ito_params)
-        render json: { status: 'SUCCESS', data: ito }
+        ito = Ito.new(ito_params)
+
+        if ito.save
+          render json: { status: 'SUCCESS', data: ito }
+        else
+          render json: { status: 'FAILED', message: 'could not create message', data: event.errors }
+        end
       end
 
       private
