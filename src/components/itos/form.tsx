@@ -2,9 +2,9 @@ import * as React from "react";
 
 const Form = (props: any) => (
   <div className="ito__form">
-    {/* <h3 className="ito__form_title">ITO機能</h3> */}
+    <h3>出来事を振り返ってみよう</h3>
+
     <div className="ito__form__content">
-      <label htmlFor="">出来事を振り返ってみよう</label>
       <input
         type="text"
         value={"aaa"}
