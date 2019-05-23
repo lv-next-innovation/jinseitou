@@ -12,6 +12,7 @@ const reducer = (state = initialState, action: IAction) => {
   switch (action.type) {
     case "DEBUG":
       axios.get("/api/v1/events").then(res => {
+        // tslint:disable-next-line:no-console
         console.log(res.data.data);
       });
 

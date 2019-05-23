@@ -2,17 +2,17 @@ import * as React from "react";
 
 const Form = (props: any) => (
   <div className="ito__form">
-    {/* <h3 className="ito__form_title">ITO機能</h3> */}
+    <h3>出来事を振り返ってみよう</h3>
+
     <div className="ito__form__content">
-      <label htmlFor="">出来事を振り返ってみよう</label>
+      {console.log(props)}
       <input
         type="text"
-        value={"aaa"}
+        value={props.itosForm.story}
         placeholder="告白した"
         className="ito__form__content__field"
-        onChange={e => props.changeContent(e.target.value)}
+        onChange={e => props.changeStory(e.target.value)}
       />
-      <button className="ito__form__content__button">Submit</button>
     </div>
 
     <div className="ito__form__content">
@@ -26,6 +26,12 @@ const Form = (props: any) => (
       />
 
       <button className="ito__form__content__plus__button">+</button>
+      <button
+        onClick={() => props.sendIto(props.itosForm)}
+        className="ito__form__content__button"
+      >
+        Submit
+      </button>
     </div>
   </div>
 );

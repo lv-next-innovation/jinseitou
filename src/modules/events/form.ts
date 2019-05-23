@@ -42,11 +42,11 @@ const reducer = (state = initialState, action: IAction) => {
   }
 };
 
-export const changeEventDate = (params: IAction) => {
+export const changeEventDate = params => {
   return { type: "CHANGE_EVENT_DATE", value: params };
 };
 
-export const changeTitle = (params: IAction) => {
+export const changeTitle = params => {
   return { type: "CHANGE_TITLE", value: params };
 };
 
