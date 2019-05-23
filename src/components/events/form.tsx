@@ -5,8 +5,8 @@ const sendEvent = (params: any) => {
   axios
     .post("/api/v1/events", {
       events: {
-        title: params,
         event_date: "2019-05-23",
+        title: params,
         user_id: 1
       }
     })
@@ -20,7 +20,6 @@ const Form = (props: any) => (
     <h3>出来事</h3>
 
     <div>
-      {console.log(props)}
       <label htmlFor="event__form__content">いつ？</label>
       <input
         type="text"
@@ -41,7 +40,10 @@ const Form = (props: any) => (
       />
     </div>
 
-    <button onClick={() => sendEvent(props.eventsForm.inputValue)} className="event__form__button">
+    <button
+      onClick={() => sendEvent(props.eventsForm.inputValue)}
+      className="event__form__button"
+    >
       Submit
     </button>
   </div>
