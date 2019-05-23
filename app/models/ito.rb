@@ -5,4 +5,5 @@ class Ito < ApplicationRecord
   validates :event_id, presence: true
 
   belongs_to :event
+  has_many :influencers
 end

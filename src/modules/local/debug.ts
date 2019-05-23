@@ -1,26 +1,29 @@
+import axios from "axios";
+
 const initialState = {
-  content: ""
+  foo: ""
 };
 
 interface IAction {
   type: string;
-  value: string;
 }
 
 const reducer = (state = initialState, action: IAction) => {
   switch (action.type) {
-    case "CHANGE_CONTENT":
-      return Object.assign({}, state, {
-        content: action.value
+    case "DEBUG":
+      axios.get("/api/v1/events").then(res => {
+        console.log(res.data.data);
       });
+
+      return state;
 
     default:
       return state;
   }
 };
 
-export const changeContent = (params: IAction) => {
-  return { type: "CHANGE_CONTENT", value: params };
+export const debug = (foo: IAction) => {
+  return { type: "DEBUG" };
 };
 
 export default reducer;

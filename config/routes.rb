@@ -8,8 +8,10 @@ Rails.application.routes.draw do
       resources :events
       get '/question/detail', to: 'questions#show'
       get '/itos', to: 'itos#index'
+      get '/itos/:id', to: 'itos#show'
       post '/itos', to: 'itos#create'
       get '/influencers', to: 'influencers#index'
+      get '/influencers/:id', to: 'influencers#show'
       post '/influencers', to: 'influencers#create'
     end
   end
