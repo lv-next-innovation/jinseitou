@@ -25,7 +25,7 @@ const reducer = (state = initialState, action: IAction) => {
 
     case "SEND_BLOG":
       return Object.assign({}, state, {
-        event_date: action.value.event_date,
+l       event_date: action.value.event_date,
         title: action.value.title,
         userId: action.value.userId
       });

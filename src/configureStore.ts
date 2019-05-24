@@ -1,4 +1,5 @@
 import { combineReducers, createStore as reduxCreateStore } from "redux";
+import ChartsMapReducer from "./modules/charts/map";
 import EventsFormReducer from "./modules/events/form";
 import ItosFormReducer from "./modules/itos/form";
 import DebugReducer from "./modules/local/debug";
@@ -18,6 +19,7 @@ const createStore = () => {
 
   const store = reduxCreateStore(
     combineReducers({
+      chartsMap: ChartsMapReducer,
       debug: DebugReducer,
       eventsForm: EventsFormReducer,
       itosForm: ItosFormReducer,
