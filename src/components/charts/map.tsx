@@ -6,22 +6,14 @@ const data = {
     {
       backgroundcolor: "rgba(225,95,150, 1)",
       data: [
-        { x: 90, y: 82 },
-        { x: 39, y: 45 },
-        { x: 63, y: 65 },
-        { x: 83, y: 75 },
-        { x: 83, y: 95 }
+        { x: 50, y: 75 },
       ],
       label: "高校生の時"
     },
     {
       backgroundcolor: "rgba(115,255,25, 1)",
       data: [
-        { x: 97, y: 92 },
-        { x: 63, y: 70 },
-        { x: 48, y: 52 },
-        { x: 83, y: 79 },
-        { x: 66, y: 74 }
+        { x: 62, y: 79 },
       ],
       label: "Good & Moreの時"
     }
