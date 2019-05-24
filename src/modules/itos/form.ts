@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const initialState = {
+  eventId: 0,
   influencer: "",
-  story: "",
-  eventId: 0
+  story: ""
 };
 
 interface IAction {
@@ -24,15 +24,14 @@ const reducer = (state = initialState, action: IAction) => {
       });
 
     case "SEND_ITO":
-      axios
-        .post("/api/v1/itos", {
-          itos: {
-            ito_id: 1,
-            name: action.value.influencer,
-            story: action.value.story,
-            event_id: 1
-          }
-        });
+      axios.post("/api/v1/itos", {
+        itos: {
+          event_id: 1,
+          ito_id: 1,
+          name: action.value.influencer,
+          story: action.value.story
+        }
+      });
 
       return state;
 
