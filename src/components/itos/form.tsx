@@ -5,7 +5,6 @@ const Form = (props: any) => (
     <h3>出来事を振り返ってみよう</h3>
 
     <div className="ito__form__content">
-      {console.log(props)}
       <input
         type="text"
         value={props.itosForm.story}

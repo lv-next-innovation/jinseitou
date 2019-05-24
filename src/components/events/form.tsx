@@ -11,7 +11,6 @@ const sendEvent = (params: any, formReset: any) => {
       }
     })
     .then(res => {
-      console.log(res.data);
       formReset();
     });
 };

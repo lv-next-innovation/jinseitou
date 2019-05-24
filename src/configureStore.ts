@@ -1,9 +1,9 @@
 import { combineReducers, createStore as reduxCreateStore } from "redux";
 import EventsFormReducer from "./modules/events/form";
+import ItosFormReducer from "./modules/itos/form";
 import DebugReducer from "./modules/local/debug";
 import MainReducer from "./modules/main";
 import TopReducer from "./modules/top";
-import ItosFormReducer from "./modules/itos/form";
 
 declare global {
   interface IWindow {
@@ -20,9 +20,9 @@ const createStore = () => {
     combineReducers({
       debug: DebugReducer,
       eventsForm: EventsFormReducer,
+      itosForm: ItosFormReducer,
       main: MainReducer,
-      top: TopReducer,
-      itosForm: ItosFormReducer
+      top: TopReducer
     })
   );
   window.store = store;
