@@ -32,8 +32,6 @@ const reducer = (state = initialState, action: IAction) => {
             story: action.value.story,
             event_id: 1
           }
-        }).then(res => {
-          console.log(res.data);
         });
 
       return state;
