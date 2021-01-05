@@ -9,7 +9,7 @@
     "prettier": "prettier --write src/**/*.{ts,tsx}"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "chart.js": "2.6",
     "prettier": "^1.17.1",
     "react": "16.x",
