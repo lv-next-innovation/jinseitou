@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "chart.js": "2.6",
+    "chart.js": "2.9",
     "prettier": "^1.17.1",
     "react": "16.x",
     "react-chartjs-2": "2.6",
